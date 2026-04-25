@@ -1,0 +1,9 @@
+{
+  "name": "pillpal-fcm-sender",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "firebase-admin": "^13.5.0"
+  }
+}
+

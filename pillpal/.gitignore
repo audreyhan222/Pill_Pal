@@ -4,6 +4,9 @@
 *.pyc
 *.swp
 .DS_Store
+
+# Firebase admin credentials (never commit)
+**/service-account*.json
 .atom/
 .buildlog/
 .history
