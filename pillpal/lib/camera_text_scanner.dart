@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:typed_data';
 
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
@@ -96,11 +97,11 @@ class _CameraTextScannerPageState extends State<CameraTextScannerPage> {
     if (controller == null) return null;
 
     // Concatenate planes into a single buffer.
-    final bytes = WriteBuffer();
+    final BytesBuilder bytes = BytesBuilder(copy: false);
     for (final plane in image.planes) {
-      bytes.putUint8List(plane.bytes);
+      bytes.add(plane.bytes);
     }
-    final buffer = bytes.done().buffer.asUint8List();
+    final Uint8List buffer = bytes.takeBytes();
 
     final rotation = InputImageRotationValue.fromRawValue(
       description.sensorOrientation,
