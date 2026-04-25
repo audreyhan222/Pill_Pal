@@ -45,12 +45,6 @@ Future<void> main() async {
     );
   });
 
-<<<<<<< HEAD
-import 'camera_text_scanner.dart';
-
-void main() {
-=======
->>>>>>> 9ccb0deccca7941bd2470cf83e19270f0386aa87
   runApp(const MainApp());
 }
 
@@ -59,11 +53,6 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-<<<<<<< HEAD
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: CameraTextScannerPage(),
-=======
     return MaterialApp(
       home: const NotificationsHome(),
       theme: ThemeData(
@@ -136,7 +125,6 @@ class _NotificationsHomeState extends State<NotificationsHome> {
           ],
         ),
       ),
->>>>>>> 9ccb0deccca7941bd2470cf83e19270f0386aa87
     );
   }
 }
